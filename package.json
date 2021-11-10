@@ -1,0 +1,23 @@
+{
+  "name": "dacs4",
+  "version": "1.0.0",
+  "description": "learn network programing",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webrtc",
+    "openvidu",
+    "kurentomediaserver",
+    "peer",
+    "to",
+    "peer",
+    "dacs4"
+  ],
+  "author": "Duy Minh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
