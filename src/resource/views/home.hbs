@@ -1,0 +1,35 @@
+
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-1 text-center justify-content-center px-xl-6 aos-init aos-animate" data-aos="fade-up">
+  {{#each room}}
+            <div class="col my-3">
+                <div class="card border-hover-primary hover-scale">
+                  <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">{{this.roomname}}</h5>
+    <p class="card-text">{{this.description}}.</p>
+   <div  class="card-body">
+    <a href="#" id="subscribeRoom" class="btn btn-primary" data-id="{{this._id}}">Subscribe</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+                    </div>     
+                </div>
+            </div>
+              {{/each}}
+    </div>
+  
+<script>
+   
+  document.addEventListener('DOMContentLoaded',function(){
+   
+    $(document).ready(function(){
+    $(".card-body a").on("click", function(){
+        var idRoom = $(this).attr("data-id");
+         $.ajax({
+            type: "put",
+            url: 'http://localhost:3000/room/subscribeRoom',
+            data: {idRoom: idRoom},
+         })
+    });
+});
+  } );
+</script>

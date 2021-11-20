@@ -2,22 +2,35 @@
   "name": "dacs4",
   "version": "1.0.0",
   "description": "learn network programing",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
+    "start": "nodemon --inspect src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "webrtc",
     "openvidu",
     "kurentomediaserver",
-    "peer",
-    "to",
-    "peer",
+    "peer to peer",
     "dacs4"
   ],
   "author": "Duy Minh",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.4",
+    "express-session": "^1.17.2",
+    "inspector": "^0.5.0",
+    "mongoose": "^6.0.12",
+    "mongoose-slug-generator": "^1.0.4",
+    "morgan": "^1.10.0",
+    "node-sass": "^6.0.1",
+    "openvidu-node-client": "^2.20.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
